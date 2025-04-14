@@ -31,10 +31,10 @@ Download it manually from Kaggle:
 | `01_load_data.R`                | Loads and inspects the shelter dataset                      |
 | `02_explore_data.R`             | Visualizes distributions and missing values                 |
 | `03_model_baseline.R`           | Baseline model (always predicts the most frequent outcome)  |
-| `04_model_randomforest.R`       | Random Forest classifier with 5-fold CV + variable importance |
+| `04_model_randomforest.R`       | Random Forest classifier with 5-fold CV, tuning, and variable importance |
 | `05_compare_models.R`           | (Planned) Compare baseline and Random Forest                |
 | `06_final_model.R`              | (Planned) Final model and evaluation                        |
-| `chooseyourproject_report.Rmd`  | R Markdown project report for edX                          |
+| `chooseyourproject_report.Rmd`  | R Markdown project report for edX                           |
 | `chooseyourproject_report.pdf`  | Knit PDF version for edX submission                         |
 | `LICENSE`                       | MIT License for reuse                                       |
 | `.gitignore`                    | Excludes data files and system folders                      |
@@ -44,7 +44,8 @@ Download it manually from Kaggle:
 ## 🔎 Preliminary Result
 
 **Baseline Accuracy:** ~42%  
-**Random Forest Accuracy:** _(in progress – to be confirmed after evaluation)_
+**Random Forest Accuracy:** **58.04%** (5-fold cross-validated, best `mtry = 10`)  
+📈 Model performance improved significantly compared to baseline.
 
 ---
 

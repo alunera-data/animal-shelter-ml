@@ -8,44 +8,52 @@ This project was developed as part of the final Capstone for the [HarvardX Data 
 
 The objective is to predict shelter animal outcomes (e.g. Adoption, Transfer, Euthanasia)  
 based on intake data such as animal type, condition, and intake type.  
-Model performance is evaluated using **accuracy** and a **confusion matrix**.  
-All modeling was done independently, following edX Honor Code guidelines.
+Model performance is evaluated using **accuracy**, **confusion matrix**, and **feature importance**.  
+All steps follow the [edX Honor Code](https://learning.edx.org/honor).
 
 ---
 
 ## 📚 Data Source
 
-The data used in this project is from the [Austin Animal Center](https://www.kaggle.com/datasets/aaronschlegel/austin-animal-center-shelter-intakes-and-outcomes),  
-published on [Kaggle](https://www.kaggle.com/). The dataset contains detailed intake and outcome records.
+The dataset is provided by the [Austin Animal Center](https://www.kaggle.com/datasets/aaronschlegel/austin-animal-center-shelter-intakes-and-outcomes),  
+hosted on [Kaggle](https://www.kaggle.com/). It contains detailed records of animal intakes and outcomes.
 
 ⚠️ **Note:** The dataset is **not included** in this repository.  
-Download it manually from Kaggle:  
+Please download it manually from Kaggle:  
 👉 https://www.kaggle.com/datasets/aaronschlegel/austin-animal-center-shelter-intakes-and-outcomes
 
 ---
 
 ## 🗂️ Project Structure
 
-| File                            | Description                                                  |
-|----------------------------------|--------------------------------------------------------------|
-| `01_load_data.R`                | Loads and inspects the shelter dataset                      |
-| `02_explore_data.R`             | Visualizes distributions and missing values                 |
-| `03_model_baseline.R`           | Baseline model (always predicts the most frequent outcome)  |
-| `04_model_randomforest.R`       | Random Forest classifier with 5-fold CV, tuning, and variable importance |
-| `05_compare_models.R`           | (Planned) Compare baseline and Random Forest                |
-| `06_final_model.R`              | (Planned) Final model and evaluation                        |
-| `chooseyourproject_report.Rmd`  | R Markdown project report for edX                           |
-| `chooseyourproject_report.pdf`  | Knit PDF version for edX submission                         |
-| `LICENSE`                       | MIT License for reuse                                       |
-| `.gitignore`                    | Excludes data files and system folders                      |
+| File                            | Description                                                   |
+|----------------------------------|----------------------------------------------------------------|
+| `01_load_data.R`                | Load and inspect the shelter dataset                          |
+| `02_explore_data.R`             | Exploratory data analysis (EDA): distributions, NA overview   |
+| `03_model_baseline.R`           | Baseline model: predict most frequent outcome ("Adoption")    |
+| `04_model_randomforest.R`       | Random Forest model with 5-fold CV and feature importance     |
+| `05_compare_models.R`           | Comparison of baseline vs. Random Forest (accuracy & plots)   |
+| `06_final_model.R`              | Final model application without CV, final evaluation          |
+| `07_final_pipeline.R`           | Complete pipeline with all steps and explanatory comments     |
+| `chooseyourproject_report.Rmd`  | R Markdown project report for edX                            |
+| `chooseyourproject_report.pdf`  | Knit PDF version for submission                               |
+| `LICENSE`                       | MIT License for reuse                                         |
+| `.gitignore`                    | Excludes data files and system folders                        |
 
 ---
 
-## 🔎 Preliminary Result
+## 🔎 Final Results
 
-**Baseline Accuracy:** ~42%  
-**Random Forest Accuracy:** **58.04%** (5-fold cross-validated, best `mtry = 10`)  
-📈 Model performance improved significantly compared to baseline.
+| Metric                    | Value     |
+|---------------------------|-----------|
+| Baseline Accuracy         | 42.18 %   |
+| Random Forest Accuracy    | 58.09 %   |
+| Absolute Improvement      | +15.91 pp |
+| Relative Improvement      | +37.7 %   |
+| Final Model Trees         | 500       |
+
+Random Forest classifier clearly outperformed the naive baseline.  
+Most important predictors: `intake_type`, `sex_upon_intake`, `intake_condition`.
 
 ---
 
@@ -53,7 +61,7 @@ Download it manually from Kaggle:
 
 - R 4.x or newer  
 - RStudio  
-- Packages: `tidyverse`, `caret`, `randomForest`
+- Packages: `tidyverse`, `caret`, `randomForest`, `scales`
 
 ---
 
@@ -64,6 +72,6 @@ and is licensed under the [MIT License](LICENSE).
 
 If you reuse code from this repository, please provide proper attribution.
 
-> 📝 _This project was developed independently.  
-> ChatGPT (OpenAI) was used to support structure, phrasing and planning.  
-> All modeling, decisions and implementation were performed and reviewed by the author._
+> _This project was developed independently.  
+> ChatGPT (OpenAI) was used to support structure, planning and phrasing.  
+> All modeling, evaluation and reporting were performed and reviewed by the author._

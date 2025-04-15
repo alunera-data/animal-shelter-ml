@@ -20,7 +20,7 @@ All steps follow the [edX Honor Code](https://learning.edx.org/honor).
 The dataset is provided by the [Austin Animal Center](https://www.kaggle.com/datasets/aaronschlegel/austin-animal-center-shelter-intakes-and-outcomes),  
 hosted on [Kaggle](https://www.kaggle.com/). It contains detailed records of animal intakes and outcomes.
 
-⚠️ **Note:** The dataset is **not included** in this repositor).  
+⚠️ **Note:** The dataset is **not included** in this repository.
 Please download it manually from Kaggle and use it locally for testing and report generation.  
 👉 https://www.kaggle.com/datasets/aaronschlegel/austin-animal-center-shelter-intakes-and-outcomes
 

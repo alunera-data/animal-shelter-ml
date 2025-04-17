@@ -20,7 +20,7 @@ All steps follow the [edX Honor Code](https://learning.edx.org/honor).
 The dataset is provided by the [Austin Animal Center](https://www.kaggle.com/datasets/aaronschlegel/austin-animal-center-shelter-intakes-and-outcomes),  
 hosted on [Kaggle](https://www.kaggle.com/). It contains detailed records of animal intakes and outcomes.
 
-⚠️ **Note:** The dataset is **not included** in this repository.
+⚠️ **Note:** The dataset is **not included** in this repository.  
 Please download it manually from Kaggle and use it locally for testing and report generation.  
 👉 https://www.kaggle.com/datasets/aaronschlegel/austin-animal-center-shelter-intakes-and-outcomes
 
@@ -92,8 +92,9 @@ and is licensed under the [MIT License](LICENSE).
 
 If you reuse code from this repository, please provide proper attribution.
 
+GitHub profile: [@alunera-data](https://github.com/alunera-data)  
+LinkedIn: [Yvonne Kirschler](https://www.linkedin.com/in/yvonne-kirschler-719224188/)
+
 > _This project was developed independently.  
 > ChatGPT (OpenAI) was used to support structure, planning and phrasing.  
 > All modeling, evaluation and reporting were performed and reviewed by the author._
-
----
